@@ -30,8 +30,9 @@ func main() {
 	fmt.Println("the value of r is", r)
 
 	// constants
-	const pi = 3.14
-	const (
+	const pi = 3.14               // untyped constant
+	const Euler float64 = 2.71828 // typed constant
+	const (                       // multiple constant declaration
 		x = 1
 		y = 2
 	)
