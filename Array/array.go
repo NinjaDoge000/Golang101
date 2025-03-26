@@ -31,4 +31,20 @@ func main() {
 	c[0] = 100
 	fmt.Println("shalloCopy", shalloCopy)
 
+	// dynamic array -> slice
+	slice := []float64{1.1, 2.2, 3.3, 4.4, 5.5}
+	var slice2 []float64
+
+	fmt.Println(slice2)
+	fmt.Println(slice[0])
+	slice = append(slice, 6.6)
+	fmt.Println(slice)
+	slice = append(slice, 7.7, 8.8, 9.9)
+
+	slice2 = append(slice2, slice...) // ... is used to append all elements of a slice to another slice
+
+	// slice vs array
+	// array is fixed size, slice is dynamic
+	// array is passed by value, slice is passed by reference
+
 }
