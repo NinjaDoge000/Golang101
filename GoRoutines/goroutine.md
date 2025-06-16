@@ -29,6 +29,8 @@ You use it to make sure your main program waits until all goroutines are done be
 
 Never try to get them below Zero!
 
+Note: a waitgroup only waits for the mentioned number of goroutines to be finished, it does not/cannot control the order of execution
+
 ## Mutex
 
 A mutex (short for "mutual exclusion") in Go is a synchronization primitive from the sync package. It is used to protect shared data from being accessed by multiple goroutines at the same time, preventing race conditions.
@@ -36,3 +38,13 @@ A mutex (short for "mutual exclusion") in Go is a synchronization primitive from
 **How to use a mutex in Go** 
 + Lock: mtx.Lock() — Only one goroutine can hold the lock at a time.
 + Unlock: mtx.Unlock() — Releases the lock so other goroutines can acquire it.
+
+
+## GO Select
+
++ select blocks until one of its cases can run.
++ If multiple are ready, one is chosen randomly.
++ If none are ready, and there's no default, it blocks.
++ If there’s a default case, it runs immediately if no channels are ready.
+
+
