@@ -1,6 +1,10 @@
 # What is context in Go?
 The context package in Go provides a way to carry deadlines, cancellation signals, and other request-scoped values across API boundaries and between goroutines.
 
+It is bassicall a advanced done channel concurrency pattern.
+
+Refer this: [Golang Context](https://youtu.be/8omcakb31xQ?si=aT5YkgqHZFZlGu9r)
+
 **Use Cases:**
 
 * Cancel goroutines when work is no longer needed
